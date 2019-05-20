@@ -7,26 +7,39 @@ Dark green: #28b485 , rgb(40, 180, 133)
 
 */
 
-* {
+*,
+*::after,
+*::before {
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
+}
+
+html {
+  font-size : 62.5%;
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size : 4.5px;
+  }
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /*font-size: 16px;*/
   line-height: 1.7;
   color : #777;
+  box-sizing: border-box;
 }
 
 header {
   height : 95vh;
   background-image :
     linear-gradient(to right bottom,
-                    rgb(126, 213, 111, 0.6),
-                    rgb(85, 197, 122, 0.6)
+                    rgb(126, 213, 111, .6),
+                    rgb(85, 197, 122, .6)
                     ),
                     url('../img/hero.jpg');
   background-size: cover;
@@ -37,17 +50,17 @@ header {
 }
 
 
-.logo-box {
+.header__logo--box {
   position: absolute;
-  top : 35px;
-  left : 25px;
+  top : 3.5rem;
+  left : 2.5rem;
 }
 
-.logo {
-  height: 50px;
+.header__logo--logo {
+  height: 5rem;
 }
 
-.header-title-box {
+.header__box {
   position: absolute;
   top : 40%;
   left : 50%;
@@ -55,27 +68,27 @@ header {
   text-align: center;
 }
 
-.header-title {
+.header__title {
   text-transform: uppercase;
   color : #fff;
-  margin-bottom : 40px;
+  margin-bottom : 4rem;
 }
 
-.header-title__main {
+.header__title--main {
   display : block;
-  font-size : 60px;
+  font-size : 6rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation-name : title-main;
   animation-duration: 5s;
 }
 
-.header-title__sub {
+.header__title--sub {
   display : block;
-  font-size : 20px;
+  font-size : 2rem;
   font-weight: 400;
-  letter-spacing: 17.5px;
+  letter-spacing: 1.75rem;
 
   animation-name: title-sub;
   animation-duration: 5s;
@@ -84,7 +97,7 @@ header {
 @keyframes title-main {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
   100% {
     opacity: 1;
@@ -95,7 +108,7 @@ header {
 @keyframes title-sub {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
   100%{
     opacity: 1;
@@ -106,7 +119,7 @@ header {
 @keyframes mainbuttonAnimation {
   0% {
     opacity : 0;
-    transform : translateY(100px)
+    transform : translateY(10rem)
   }
   100% {
     opacity : 1;
@@ -117,17 +130,15 @@ header {
 .btn,
 .btn:visited,
 .btn:link {
-  padding : 12px 40px;
+  padding : 1.2rem 4rem;
   display : inline-block;
   border : none;
   text-transform: uppercase;
-  border-radius: 100px;
-  box-shadow: -2px 4px 23px -8px rgba(0,0,0, 0.2);
-  transition: box-shadow 0.2s;
+  border-radius: 10rem;
+  box-shadow: -.2rem .4rem 2.3rem -.8rem rgba(0,0,0, .2);
+  transition: box-shadow .2s;
   position: relative;
-
-  animation-name: mainbuttonAnimation;
-  animation-duration : 2s;
+  font-size: 1.6rem;
 }
 
 .btn::after{
@@ -137,12 +148,17 @@ header {
   width: 100%;
   border : none;
   text-transform: uppercase;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s;
+  transition: all .4s;
+}
+
+.animated-button {
+  animation-name: mainbuttonAnimation;
+  animation-duration : 2s;
 }
 
 .btn-white::after {
@@ -150,7 +166,7 @@ header {
 }
 
 .btn:hover{
-  box-shadow: -2px 4px 51px -8px rgba(0,0,0, 0.72);
+  box-shadow: -.2rem .4rem 5.1rem -.8rem rgba(0,0,0, .72);
 }
 
 .btn:hover::after{
@@ -159,8 +175,8 @@ header {
 }
 
 .btn:active{
-  box-shadow: -2px 4px 23px -8px rgba(0,0,0, 0.72);
-  transform: translateY(1px)
+  box-shadow: -.2rem .4rem 2.3rem -.8rem rgba(0,0,0, .72);
+  transform: translateY(.1rem)
 }
 
 .btn:focus{
