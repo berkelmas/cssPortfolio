@@ -1,0 +1,21 @@
+{
+  "name": "cssportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "liveserver" : "live-server --port=5000",
+    "sass" : "sass sass/index.sass css/index.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berkelmas/cssPortfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berkelmas/cssPortfolio/issues"
+  },
+  "homepage": "https://github.com/berkelmas/cssPortfolio#readme"
+}
