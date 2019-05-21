@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "liveserver" : "live-server --port=5000",
-    "sass" : "sass sass/index.sass css/index.css --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "liveserver": "live-server --port=5000",
+    "sass": "sass sass/index.scss css/index.css --watch"
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/berkelmas/cssPortfolio/issues"
   },
-  "homepage": "https://github.com/berkelmas/cssPortfolio#readme"
+  "homepage": "https://github.com/berkelmas/cssPortfolio#readme",
+  "dependencies": {}
 }
