@@ -1,0 +1,44 @@
+.composition {
+  position : relative;
+}
+
+.composition-image {
+  position: absolute;
+  border-radius: 1rem;
+}
+
+.composition-image-1 {
+  top : 4rem;
+  left : 8rem;
+  transition: transform 0.5s;
+  &:hover {
+    transform : scale(1.4);
+    z-index: 1;
+    padding : 1rem;
+    border : 1rem solid $medium-green;
+  }
+}
+
+.composition-image-2 {
+  top: 8rem;
+  left : 32rem;
+  transition: transform .5s;
+  &:hover {
+    transform : scale(1.4);
+    z-index : 1;
+    padding : 1rem;
+    border : 1rem solid $medium-green;
+  }
+}
+
+.composition-image-3 {
+  top: 20rem;
+  left: 24rem;
+  transition: transform 0.5s;
+  &:hover{
+    transform : scale(1.4);
+    z-index: 1;
+    padding : 1rem;
+    border : 1rem solid $medium-green;
+  }
+}

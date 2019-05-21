@@ -1,34 +1,31 @@
+
+// GENERAL BUTTON SPESIFICATION
 .btn,
 .btn:visited,
 .btn:link {
-  padding : 1.2rem 4rem;
   display : inline-block;
-  border : none;
-  text-transform: uppercase;
   text-decoration: none;
-  color : $color-black;
+  &:focus {
+    outline: 0;
+  }
+}
+
+
+// BUTTON WHITE SPESIFICATION
+.btn-white{
+  background-color: #fff;
+  border-color : #fff;
+  color : #777;
   border-radius: 10rem;
   box-shadow: -.2rem .4rem 2.3rem -.8rem rgba($color-black, .2);
   transition: box-shadow .2s;
   position: relative;
   font-size: 1.6rem;
-
-  &:hover {
-    box-shadow: -.2rem .4rem 5.1rem -.8rem rgba($color-black, .72);
-    &::after {
-      transform : scale(1.3);
-      opacity: 0;
-    }
-  }
-  &:active{
-    box-shadow: -.2rem .4rem 2.3rem -.8rem rgba($color-black, .72);
-    transform: translateY(.1rem);
-  }
-
-  &:focus {
-    outline: 0;
-  }
-  &::after {
+  padding : 1.2rem 4rem;
+  border : none;
+  text-transform: uppercase;
+  &::after{
+    background-color: #fff;
     content: "";
     display : inline-block;
     height: 100%;
@@ -42,14 +39,33 @@
     z-index: -1;
     transition: all .4s;
   }
+  &:active{
+    box-shadow: -.2rem .4rem 2.3rem -.8rem rgba($color-black, .72);
+    transform: translateY(.1rem);
+  }
+  &:hover {
+    box-shadow: -.2rem .4rem 5.1rem -.8rem rgba($color-black, .72);
+    &::after {
+      transform : scale(1.3);
+      opacity: 0;
+    }
+  }
 }
 
-.btn-white{
-  background-color: #fff;
-  border-color : #fff;
-  color : #777;
-  &::after{
-    background-color: #fff
+
+.btn-transparent {
+  background-color : transparent;
+  color : $medium-green;
+  font-weight: 700;
+  border-bottom: .1rem solid $medium-green;
+  transition: all .2s;
+  &:hover{
+    background-color: $medium-green;
+    color : #f7f7f7;
+    border-color: #f7f7f7;
+    transform : scale(1.1) translateX(1rem);
+    box-shadow: .4rem .4rem 1rem rgba($color-black, 0.2);
+    padding : 0 0.5rem;
   }
 }
 

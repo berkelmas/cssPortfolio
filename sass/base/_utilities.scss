@@ -1,40 +1,7 @@
-@media only screen and (max-width: 500px) {
-  html {
-    font-size : 4.5px;
-  }
-
+.center-text{
+  text-align: center;
 }
 
-// Grid
-.row {
-  max-width: $grid-width;
-  background-color: red;
-  margin : 0 auto;
-  margin-bottom : $horizontal-gutter;
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-
-[class^="col-"] {
-  float: left;
-}
-
-// x vs 2x column
-.col-1-of-3 {
-  width: 33%;
-}
-
-
-.col-2-of-3 {
-  width: 66%;
-}
-
-
-// x vs x column
-.col-1-of-2 {
-  width: 50%;
+.margin-bottom-8 {
+  margin-bottom: 8rem;
 }

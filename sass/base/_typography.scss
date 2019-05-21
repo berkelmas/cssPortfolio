@@ -1,8 +1,36 @@
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  /*font-size: 16px;*/
+  font-size: 16px;
   line-height: 1.7;
   color : #777;
   box-sizing: border-box;
+}
+
+.about-heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  background : linear-gradient(to right, $light-green, $dark-green);
+  -webkit-background-clip: text;
+  color : transparent;
+  transition: transform 0.3s;
+  &:hover{
+    transform : skewX(5deg) skewY(-2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 1rem rgba($color-black, .2)
+  }
+}
+
+.h3-header {
+  letter-spacing: .02rem;
+  margin-bottom : 1rem;
+  text-transform: uppercase;
+}
+
+// son eleman margin-bottoma sahip olmayacak.
+.paragraph {
+  &:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
 }

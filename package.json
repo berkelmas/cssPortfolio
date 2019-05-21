@@ -17,5 +17,7 @@
     "url": "https://github.com/berkelmas/cssPortfolio/issues"
   },
   "homepage": "https://github.com/berkelmas/cssPortfolio#readme",
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
 }

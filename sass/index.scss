@@ -4,7 +4,15 @@
 @import 'layout/header';
 @import 'base/utilities';
 @import 'components/button';
+@import 'layout/about';
+@import 'components/composition';
 
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+@import "../node_modules/bootstrap/scss/grid";
 
 *,
 *::after,
@@ -13,8 +21,6 @@
   box-sizing: inherit;
   margin: 0;
 }
-
-
 
 html {
     font-size : 62.5%;
