@@ -6,8 +6,9 @@
 @import 'components/button';
 @import 'layout/about';
 @import 'components/composition';
+@import 'layout/features';
 
-// Required
+// Required BOOTSTRAP
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -24,4 +25,10 @@
 
 html {
     font-size : 62.5%;
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 30%;
+  }
 }

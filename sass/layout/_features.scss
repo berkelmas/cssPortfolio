@@ -1,0 +1,11 @@
+.features-section{
+  height: 80vh;
+  margin-bottom : 10vh;
+  background-image: linear-gradient(to right, transparentize($light-green, 0.6), transparentize($dark-green, 0.6)), url('../img/nat-4.jpg');
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+
+  margin-top : -73px;
+
+}

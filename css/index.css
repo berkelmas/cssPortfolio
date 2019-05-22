@@ -191,60 +191,53 @@ header .header__title--sub {
 .about-section {
   background-color: #f7f7f7;
   padding-top: 22.5rem;
-  padding-bottom: 15rem;
-  margin-top: -20vh;
+  padding-bottom: 20rem;
+  margin-top: -15vh;
   overflow: hidden;
 }
 
 .composition {
   position: relative;
+  height: 40rem;
 }
-
 .composition-image {
   position: absolute;
   border-radius: 1rem;
+  width: 55%;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  outline-offset: 2rem;
 }
-
 .composition-image-1 {
   top: 4rem;
   left: 8rem;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: all 0.5s;
 }
-.composition-image-1:hover {
-  transform: scale(1.4);
-  z-index: 1;
-  padding: 1rem;
-  border: 1rem solid #55c57a;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-
 .composition-image-2 {
   top: 8rem;
   left: 32rem;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: all 0.5s;
 }
-.composition-image-2:hover {
-  transform: scale(1.4);
-  z-index: 1;
-  padding: 1rem;
-  border: 1rem solid #55c57a;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-
 .composition-image-3 {
   top: 20rem;
   left: 24rem;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: all 0.5s;
 }
-.composition-image-3:hover {
+.composition-image:hover {
   transform: scale(1.4);
   z-index: 1;
-  padding: 1rem;
-  border: 1rem solid #55c57a;
+  outline: 1rem solid #55c57a;
   box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+.composition:hover .composition-image:not(:hover) {
+  transform: scale(0.9);
+}
+
+.features-section {
+  height: 80vh;
+  margin-bottom: 10vh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.4)), url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  margin-top: -73px;
 }
 
 .container {
@@ -1222,6 +1215,12 @@ header .header__title--sub {
 
 html {
   font-size: 62.5%;
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 30%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
