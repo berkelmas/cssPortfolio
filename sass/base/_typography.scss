@@ -30,7 +30,15 @@ body {
 
 // son eleman margin-bottoma sahip olmayacak.
 .paragraph {
+  font-size: 1.6rem;
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
+}
+
+i.features-icon {
+  font-size : 6rem;
+  background : linear-gradient(to right, $medium-green, $dark-green);
+  -webkit-background-clip: text;
+  color : transparent;
 }

@@ -58,8 +58,18 @@ body {
   text-transform: uppercase;
 }
 
+.paragraph {
+  font-size: 1.6rem;
+}
 .paragraph:not(:last-child) {
   margin-bottom: 1.5rem;
+}
+
+i.features-icon {
+  font-size: 6rem;
+  background: linear-gradient(to right, #55c57a, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 header {
@@ -241,15 +251,60 @@ header .header__title--sub {
 }
 .features-section-card {
   background-color: rgba(222, 222, 222, 0.8);
-  margin-top: 20rem;
+  margin-top: 14rem;
   height: 45vh;
   border-radius: 15px;
   transition: all 0.4s;
+  padding: 1rem;
 }
 .features-section-card:hover {
   background-color: rgba(196, 196, 196, 0.8);
   box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
   transform: translate(0.2rem, -0.2rem);
+}
+.features-section-card-title {
+  color: #6b6b6b;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.tour-cards-section {
+  background-color: #f7f7f7;
+  padding: 30rem 0;
+  margin-top: -16rem;
+}
+
+.tour-card {
+  position: relative;
+  perspective: 100rem;
+  height: 50rem;
+  margin: 3rem;
+  transition: all 2s;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+.tour-card-1-front {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  backface-visibility: hidden;
+  transition: all 2s;
+}
+.tour-card-1-back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+  transition: all 2s;
+  transform: rotateY(180deg);
+}
+.tour-card:hover .tour-card-1-front {
+  transform: rotateY(180deg);
+}
+.tour-card:hover .tour-card-1-back {
+  transform: rotateY(360deg);
 }
 
 .container {
@@ -1231,7 +1286,7 @@ html {
 
 @media only screen and (max-width: 500px) {
   html {
-    font-size: 30%;
+    font-size: 25%;
   }
 }
 

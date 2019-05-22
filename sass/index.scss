@@ -7,6 +7,8 @@
 @import 'layout/about';
 @import 'components/composition';
 @import 'layout/features';
+@import 'layout/tourcardssection';
+@import 'components/tourcards';
 
 // Required BOOTSTRAP
 @import "../node_modules/bootstrap/scss/functions";
@@ -29,6 +31,6 @@ html {
 
 @media only screen and (max-width: 500px) {
   html {
-    font-size: 30%;
+    font-size: 25%;
   }
 }
