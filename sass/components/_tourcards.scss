@@ -4,25 +4,29 @@
   height: 50rem;
   margin: 3rem;
   transition: all 2s;
-  box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
 
+
+  // CARD 1
   &-1-front {
     position: absolute;
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: white;
     backface-visibility: hidden;
+    box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
     transition: all 2s;
   }
 
   &-1-back {
+    text-align: center;
     position:absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: yellow;
+    background-image: linear-gradient(to right bottom, $orange-light, darken($orange-light, 10%));
     transition: all 2s;
+    box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
     transform : rotateY(180deg);
 
   }
@@ -35,4 +39,92 @@
     transform : rotateY(360deg);
   }
 
+
+  // CARD 2
+  &-2-front {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    backface-visibility: hidden;
+    box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
+    transition: all 2s;
+  }
+
+  &-2-back {
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, $light-green, darken($light-green, 10%));
+    transition: all 2s;
+    box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
+    transform : rotateY(180deg);
+
+  }
+
+  &:hover &-2-front {
+    transform : rotateY(180deg);
+  }
+
+  &:hover &-2-back {
+    transform : rotateY(360deg);
+  }
+
+
+  // CARD 3
+  &-3-front {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    backface-visibility: hidden;
+    box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
+    transition: all 2s;
+  }
+
+  &-3-back {
+    position:absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom, $blue-light, darken($blue-light, 10%));
+    transition: all 2s;
+    box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
+    transform : rotateY(180deg);
+
+  }
+
+  &:hover &-3-front {
+    transform : rotateY(180deg);
+  }
+
+  &:hover &-3-back {
+    transform : rotateY(360deg);
+  }
+}
+
+
+.tour-card-front-img {
+  background-image: linear-gradient(to right bottom, transparentize($light-green, .2), transparentize($dark-green, .2)), url('../img/nat-5.jpg');
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  height: 45%;
+  background-size: cover;
+  background-position: top;
+
+  position: relative;
+
+  &-text {
+    position: absolute;
+    top : 16rem;
+    z-index: 2;
+    left : 21rem;
+    color : white;
+    font-weight: 100;
+    font-size: 2.5rem;
+    width : 12rem;
+    background-image: linear-gradient(to right bottom, transparentize($light-green, .2), transparentize($dark-green, .2));
+  }
 }

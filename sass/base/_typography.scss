@@ -42,3 +42,20 @@ i.features-icon {
   -webkit-background-clip: text;
   color : transparent;
 }
+
+
+.tour-text-only {
+  display : inline-block;
+  padding-top : 6rem;
+  padding-bottom : 3rem;
+  font-size: 2rem;
+  color : white;
+}
+
+.tour-text-price {
+  display:  block;
+  font-size: 5rem;
+  padding-bottom : 3rem;
+  color : white;
+  font-weight: 100;
+}
