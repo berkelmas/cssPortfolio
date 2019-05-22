@@ -237,7 +237,19 @@ header .header__title--sub {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-  margin-top: -73px;
+  margin-top: -10rem;
+}
+.features-section-card {
+  background-color: rgba(222, 222, 222, 0.8);
+  margin-top: 20rem;
+  height: 45vh;
+  border-radius: 15px;
+  transition: all 0.4s;
+}
+.features-section-card:hover {
+  background-color: rgba(196, 196, 196, 0.8);
+  box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translate(0.2rem, -0.2rem);
 }
 
 .container {

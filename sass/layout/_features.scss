@@ -6,6 +6,18 @@
   background-position: top;
   clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
 
-  margin-top : -73px;
+  margin-top : -10rem;
 
+  &-card {
+    background-color: rgba(darken($color-gray-light-1, 10%), .8);
+    margin-top : 20rem;
+    height : 45vh;
+    border-radius: 15px;
+    transition: all .4s;
+    &:hover{
+      background-color: rgba(darken($color-gray-light-1, 20%), .8);
+      box-shadow: .5rem 1rem 1rem rgba($color-black, .2);
+      transform: translate(0.2rem, -.2rem);
+    }
+  }
 }
