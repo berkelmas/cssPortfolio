@@ -1,0 +1,51 @@
+.section-story{
+  position : relative;
+  padding : 0 0;
+  overflow: hidden;
+
+  &-block {
+    width: 80%;
+    height: 20rem;
+    margin: 3rem auto;
+    background-color: $color-gray-light-1;
+    box-shadow: 0rem 1rem 2rem rgba($color-black, 0.3);
+    transform: skewX(-10deg);
+    overflow: hidden;
+    opacity : .85;
+
+    &-img {
+      height: 100%;
+      transform: translateX(-3rem);
+      transition: all .4s;
+
+
+      &-caption {
+        text-transform: uppercase;
+        color : white;
+        position : absolute;
+        top : 60%;
+        left : 23%;
+        opacity: 0;
+        transition: all .3s;
+      }
+
+      &-block {
+        height: 100%;
+        overflow: hidden;
+        float: left;
+        clip-path: circle(33% at 40% 50%);
+        shape-outside: circle(40% at 40% 50%);
+        transform: skewX(10deg);
+
+        &:hover .section-story-block-img {
+          transform : scale(1.2) translateX(-3rem);
+          filter: blur(2px) brightness(80%);
+          &-caption {
+            opacity : 1;
+            transform : translateY(-3rem);
+          }
+        }
+      }
+    }
+  }
+}

@@ -59,3 +59,19 @@ i.features-icon {
   color : white;
   font-weight: 100;
 }
+
+.story{
+  &-paragraph{
+    display: inline;
+    color : gray;
+    padding : .5rem;
+    backface-visibility: hidden;
+    transform: skewX(10deg);
+  }
+  &-heading {
+    display : inline;
+    color : gray;
+    text-transform: uppercase;
+    transform: skewX(10deg);
+  }
+}

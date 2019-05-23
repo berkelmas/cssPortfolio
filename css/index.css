@@ -88,6 +88,20 @@ i.features-icon {
   font-weight: 100;
 }
 
+.story-paragraph {
+  display: inline;
+  color: gray;
+  padding: 0.5rem;
+  backface-visibility: hidden;
+  transform: skewX(10deg);
+}
+.story-heading {
+  display: inline;
+  color: gray;
+  text-transform: uppercase;
+  transform: skewX(10deg);
+}
+
 header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(85, 197, 122, 0.4)), url("../img/hero.jpg");
@@ -292,7 +306,8 @@ display-center {
 
 .tour-cards-section {
   background-color: #f7f7f7;
-  padding: 20rem 0;
+  padding-top: 20rem;
+  padding-bottom: 5rem;
   margin-top: -23rem;
 }
 
@@ -496,6 +511,60 @@ display-center {
 }
 .tour-list-element:not(:last-child) {
   border-bottom: 0.01rem solid #f3f3f3;
+}
+
+.section-story {
+  position: relative;
+  padding: 0 0;
+  overflow: hidden;
+}
+.section-story-block {
+  width: 80%;
+  height: 20rem;
+  margin: 3rem auto;
+  background-color: #f7f7f7;
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: skewX(-10deg);
+  overflow: hidden;
+  opacity: 0.85;
+}
+.section-story-block-img {
+  height: 100%;
+  transform: translateX(-3rem);
+  transition: all 0.4s;
+}
+.section-story-block-img-caption {
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 23%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.section-story-block-img-block {
+  height: 100%;
+  overflow: hidden;
+  float: left;
+  clip-path: circle(33% at 40% 50%);
+  shape-outside: circle(40% at 40% 50%);
+  transform: skewX(10deg);
+}
+.section-story-block-img-block:hover .section-story-block-img {
+  transform: scale(1.2) translateX(-3rem);
+  filter: blur(2px) brightness(80%);
+}
+.section-story-block-img-block:hover .section-story-block-img-caption {
+  opacity: 1;
+  transform: translateY(-3rem);
+}
+
+.bg-video-container {
+  position: absolute;
+  z-index: -1;
+}
+.bg-video-content {
+  opacity: 0.3;
 }
 
 .container {
