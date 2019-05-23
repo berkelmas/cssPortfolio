@@ -309,6 +309,8 @@ display-center {
 }
 .tour-card-1-front {
   position: absolute;
+  border-radius: 2rem;
+  overflow: hidden;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -319,11 +321,11 @@ display-center {
 }
 .tour-card-1-back {
   text-align: center;
-  position: absolute;
-  top: 0;
+  border-radius: 2rem;
+  overflow: hidden;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, #ffaa00, #cc8800);
+  background-image: linear-gradient(to right bottom, #7ed56f, #3c982c);
   transition: all 2s;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
   transform: rotateY(180deg);
@@ -336,20 +338,24 @@ display-center {
 }
 .tour-card-2-front {
   position: absolute;
+  border-radius: 2rem;
+  overflow: hidden;
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: white;
   backface-visibility: hidden;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 2s;
 }
 .tour-card-2-back {
   position: absolute;
+  border-radius: 2rem;
+  overflow: hidden;
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, #7ed56f, #5bc948);
+  background-image: linear-gradient(to right bottom, #00c5ff, #009ecc);
   transition: all 2s;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
   transform: rotateY(180deg);
@@ -362,20 +368,24 @@ display-center {
 }
 .tour-card-3-front {
   position: absolute;
+  border-radius: 2rem;
+  overflow: hidden;
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: white;
   backface-visibility: hidden;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
   transition: all 2s;
 }
 .tour-card-3-back {
   position: absolute;
+  border-radius: 2rem;
+  overflow: hidden;
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right bottom, #00c5ff, #009ecc);
+  background-image: linear-gradient(to right bottom, #ffaa00, #cc8800);
   transition: all 2s;
   box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
   transform: rotateY(180deg);
@@ -390,6 +400,7 @@ display-center {
 .tour-card-front-img {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-5.jpg");
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
   height: 45%;
   background-size: cover;
   background-position: top;
@@ -397,14 +408,94 @@ display-center {
 }
 .tour-card-front-img-text {
   position: absolute;
+  text-transform: uppercase;
   top: 16rem;
   z-index: 2;
-  left: 21rem;
+  left: 16rem;
   color: white;
   font-weight: 100;
   font-size: 2.5rem;
-  width: 12rem;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+  width: 15rem;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9));
+}
+.tour-card-front-img-text + .tour-card-front-img-text {
+  z-index: 3;
+  width: 9rem;
+  top: 19.5rem;
+  left: 22rem;
+}
+
+.tour-card-front-img-2 {
+  background-image: linear-gradient(to right bottom, rgba(0, 197, 255, 0.8), rgba(0, 197, 255, 0.8)), url("../img/nat-8.jpg");
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
+  height: 45%;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+.tour-card-front-img-2-text {
+  position: absolute;
+  text-transform: uppercase;
+  top: 16rem;
+  z-index: 2;
+  left: 16rem;
+  color: white;
+  font-weight: 100;
+  font-size: 2.5rem;
+  width: 15rem;
+  background-image: linear-gradient(to right bottom, rgba(0, 197, 255, 0.9), rgba(0, 197, 255, 0.9));
+}
+.tour-card-front-img-2-text + .tour-card-front-img-2-text {
+  z-index: 3;
+  width: 55%;
+  top: 19.5rem;
+  left: 13.5rem;
+}
+
+.tour-card-front-img-3 {
+  background-image: linear-gradient(to right bottom, rgba(255, 170, 0, 0.8), rgba(255, 170, 0, 0.8)), url("../img/nat-10.jpg");
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
+  height: 45%;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+.tour-card-front-img-3-text {
+  position: absolute;
+  text-transform: uppercase;
+  top: 16rem;
+  z-index: 2;
+  left: 12rem;
+  color: white;
+  font-weight: 100;
+  font-size: 2.5rem;
+  width: 25rem;
+  background-image: linear-gradient(to right bottom, rgba(255, 170, 0, 0.9), rgba(255, 170, 0, 0.9));
+}
+.tour-card-front-img-3-text + .tour-card-front-img-3-text {
+  z-index: 3;
+  width: 80%;
+  top: 19.5rem;
+  left: 16.5rem;
+}
+
+.tour-list {
+  positon: relative;
+}
+.tour-list-ul {
+  padding-top: 5rem;
+  margin: 0 auto;
+  list-style-type: none;
+  width: 80%;
+}
+.tour-list-element {
+  text-align: center;
+  padding: 0.5rem;
+}
+.tour-list-element:not(:last-child) {
+  border-bottom: 0.01rem solid #f3f3f3;
 }
 
 .container {

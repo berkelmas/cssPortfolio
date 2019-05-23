@@ -9,6 +9,8 @@
   // CARD 1
   &-1-front {
     position: absolute;
+    border-radius: 2rem;
+    overflow: hidden;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -20,11 +22,11 @@
 
   &-1-back {
     text-align: center;
-    position:absolute;
-    top: 0;
+    border-radius: 2rem;
+    overflow: hidden;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right bottom, $orange-light, darken($orange-light, 10%));
+    background-image: linear-gradient(to right bottom, $light-green, darken($light-green, 25%));
     transition: all 2s;
     box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
     transform : rotateY(180deg);
@@ -43,10 +45,12 @@
   // CARD 2
   &-2-front {
     position: absolute;
+    border-radius: 2rem;
+    overflow: hidden;
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: white;
     backface-visibility: hidden;
     box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
     transition: all 2s;
@@ -54,10 +58,12 @@
 
   &-2-back {
     position:absolute;
+    border-radius: 2rem;
+    overflow: hidden;
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right bottom, $light-green, darken($light-green, 10%));
+    background-image: linear-gradient(to right bottom, $blue-light, darken($blue-light, 10%));
     transition: all 2s;
     box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
     transform : rotateY(180deg);
@@ -76,10 +82,12 @@
   // CARD 3
   &-3-front {
     position: absolute;
+    border-radius: 2rem;
+    overflow: hidden;
     z-index: 1;
     width: 100%;
     height: 100%;
-    background-color: red;
+    background-color: white;
     backface-visibility: hidden;
     box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
     transition: all 2s;
@@ -87,10 +95,12 @@
 
   &-3-back {
     position:absolute;
+    border-radius: 2rem;
+    overflow: hidden;
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right bottom, $blue-light, darken($blue-light, 10%));
+    background-image: linear-gradient(to right bottom, $orange-light, darken($orange-light, 10%));
     transition: all 2s;
     box-shadow: 1rem 1rem 1rem rgba($color-black, .2);
     transform : rotateY(180deg);
@@ -106,25 +116,108 @@
   }
 }
 
-
 .tour-card-front-img {
   background-image: linear-gradient(to right bottom, transparentize($light-green, .2), transparentize($dark-green, .2)), url('../img/nat-5.jpg');
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
   height: 45%;
   background-size: cover;
   background-position: top;
-
   position: relative;
 
   &-text {
     position: absolute;
+    text-transform: uppercase;
     top : 16rem;
     z-index: 2;
-    left : 21rem;
+    left : 16rem;
     color : white;
     font-weight: 100;
     font-size: 2.5rem;
-    width : 12rem;
-    background-image: linear-gradient(to right bottom, transparentize($light-green, .2), transparentize($dark-green, .2));
+    width : 15rem;
+    background-image: linear-gradient(to right bottom, transparentize($light-green, .1), transparentize($dark-green, .1));
+    & + & {
+      z-index: 3;
+      width: 9rem;
+      top: 19.5rem;
+      left: 22rem;
+    }
+  }
+}
+
+.tour-card-front-img-2 {
+  background-image: linear-gradient(to right bottom, transparentize($blue-light, .2), transparentize($blue-light, .2)), url('../img/nat-8.jpg');
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
+  height: 45%;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  &-text {
+    position: absolute;
+    text-transform: uppercase;
+    top : 16rem;
+    z-index: 2;
+    left : 16rem;
+    color : white;
+    font-weight: 100;
+    font-size: 2.5rem;
+    width : 15rem;
+    background-image: linear-gradient(to right bottom, transparentize($blue-light, .1), transparentize($blue-light, .1));
+
+    & + & {
+      z-index: 3;
+      width: 55%;
+      top: 19.5rem;
+      left: 13.5rem;
+    }
+  }
+}
+
+.tour-card-front-img-3 {
+  background-image: linear-gradient(to right bottom, transparentize($orange-light, .2), transparentize($orange-light, .2)), url('../img/nat-10.jpg');
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
+  height: 45%;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  &-text {
+    position: absolute;
+    text-transform: uppercase;
+    top : 16rem;
+    z-index: 2;
+    left : 12rem;
+    color : white;
+    font-weight: 100;
+    font-size: 2.5rem;
+    width : 25rem;
+    background-image: linear-gradient(to right bottom, transparentize($orange-light, .1), transparentize($orange-light, .1));
+
+    & + & {
+      z-index: 3;
+      width: 80%;
+      top: 19.5rem;
+      left: 16.5rem;
+    }
+  }
+}
+
+//
+.tour-list{
+  positon : relative;
+  &-ul {
+    padding-top : 5rem;
+    margin : 0 auto;
+    list-style-type: none;
+    width: 80%;
+  }
+  &-element{
+    text-align: center;
+    padding : .5rem;
+
+    &:not(:last-child){
+      border-bottom: .01rem solid lighten(gray, 45%);
+    }
   }
 }
