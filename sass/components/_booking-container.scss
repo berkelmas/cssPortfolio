@@ -39,6 +39,7 @@
            outline : none;
            box-shadow: 0rem 1rem 1rem rgba($color-black, 0.15);
            border-bottom : .3rem solid $light-green;
+           transition: all .5s;
 
            &:invalid {
              border-bottom : .3rem solid orangered;
@@ -75,7 +76,7 @@
            transition: all .6s;
          }
          &-real {
-           visibility: hidden;
+           display: none;
          }
 
          &-real:checked + &-label span::after{
