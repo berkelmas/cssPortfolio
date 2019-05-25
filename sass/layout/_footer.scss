@@ -1,0 +1,49 @@
+.section-footer {
+  background-color: $footer-black;
+  padding : 5rem 10rem;
+}
+
+.footer {
+  &-logo-box {
+    display: block;
+    width: 20rem;
+    margin: 0 auto;
+  }
+
+  &-logo {
+    width: 100%;
+  }
+
+  &-links {
+    margin-top: 10rem;
+    display: inline-block;
+    border-top : .1rem solid gray;
+
+    &-list {
+      list-style-type: none;
+      color : white;
+      text-transform: uppercase;
+    }
+
+    &-item {
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      font-weight: 400;
+      color : white;
+
+      transition: transform 0.3s;
+      &:hover{
+        transform : skewX(5deg) skewY(-2deg) scale(1.1);
+        text-shadow: 0.5rem 1rem 1rem rgba($color-black, .2);
+        background : linear-gradient(to right, $light-green, $dark-green);
+        -webkit-background-clip: text;
+        color : transparent;
+      }
+      &:not(:first-of-type) {
+        padding-left: 1rem;
+      }
+    }
+
+  }
+}

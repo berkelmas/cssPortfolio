@@ -5,6 +5,7 @@
 .btn:link {
   display : inline-block;
   text-decoration: none;
+    cursor: pointer;
   &:focus {
     outline: 0;
   }
@@ -80,7 +81,8 @@
     transition: all .5s;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color : lighten($dark-green, 10%);
     &::after {
       transform : scale(1.5);
