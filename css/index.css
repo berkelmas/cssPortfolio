@@ -52,6 +52,24 @@ body {
   text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+.popup-heading {
+  font-size: 3rem;
+  display: inline-block;
+  font-weight: 400;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.3s;
+}
+.popup-heading:hover {
+  transform: skewX(5deg) skewY(-2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+.popup-heading-secondary {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 .h3-header {
   letter-spacing: 0.02rem;
   margin-bottom: 1rem;
@@ -853,6 +871,49 @@ display-center {
 
 .navigation-checkbox-button:hover .navigation-toogle-icon::before {
   top: -1.5rem;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.popup-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80vh;
+  background-color: white;
+  z-index: 5;
+}
+.popup-container-text {
+  position: absolute;
+  top: 0;
+  left: 32%;
+  margin-top: 10%;
+}
+.popup-container-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+}
+.popup-container-img-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+}
+.popup-container-img-image:last-of-type {
+  top: 50%;
 }
 
 .container {
