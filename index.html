@@ -125,7 +125,7 @@
         </div>
       </section>
 
-      <section class="tour-cards-section">
+      <section class="tour-cards-section" id="tour-cards-section">
         <div class="container">
           <div class="center-text">
             <h1 class="about-heading-secondary">Most Popular Tours</h1>
@@ -152,7 +152,7 @@
                 <div class="tour-text-container">
                   <p class="tour-text-only">ONLY</p>
                   <p class="tour-text-price">$297</p>
-                  <a href="#" class="btn btn-white">Call Now</a>
+                  <a href="#popup" class="btn btn-white">Call Now</a>
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@
                 <div class="tour-text-container center-text">
                   <p class="tour-text-only">ONLY</p>
                   <p class="tour-text-price">$297</p>
-                  <a href="#" class="btn btn-white">Call Now</a>
+                  <a href="#popup" class="btn btn-white">Call Now</a>
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@
                 <div class="tour-text-container center-text">
                   <p class="tour-text-only">ONLY</p>
                   <p class="tour-text-price">$297</p>
-                  <a href="#" class="btn btn-white">Call Now</a>
+                  <a href="#popup" class="btn btn-white">Call Now</a>
                 </div>
               </div>
             </div>
@@ -286,11 +286,11 @@
             <div class="col-sm">
               <div class="footer-links">
                 <ul class="footer-links-list">
-                  <li class="footer-links-item"><a class="footer-links-item" href="">Company</a></li>
-                  <li class="footer-links-item"><a class="footer-links-item" href="">Contact Us</a></li>
-                  <li class="footer-links-item"><a class="footer-links-item" href="">Careers</a></li>
-                  <li class="footer-links-item"><a class="footer-links-item" href="">Privacy Policy</a></li>
-                  <li class="footer-links-item"><a class="footer-links-item" href="">Terms</a></li>
+                  <li class="footer-links-item"><a class="footer-links-item" href="#">Company</a></li>
+                  <li class="footer-links-item"><a class="footer-links-item" href="#">Contact Us</a></li>
+                  <li class="footer-links-item"><a class="footer-links-item" href="#">Careers</a></li>
+                  <li class="footer-links-item"><a class="footer-links-item" href="#">Privacy Policy</a></li>
+                  <li class="footer-links-item"><a class="footer-links-item" href="#">Terms</a></li>
                 </ul>
               </div>
             </div>
@@ -304,16 +304,19 @@
         </div>
       </footer>
 
-      <div class="popup">
+      <div class="popup" id="popup">
         <div class="popup-container">
           <div class="popup-container-img">
             <img src="img/nat-8.jpg" alt="" class="popup-container-img-image">
             <img src="img/nat-9.jpg" alt="" class="popup-container-img-image">
           </div>
           <div class="popup-container-text">
+            <a href="#tour-cards-section" class="popup-container-close">&times;</a>
             <h3 class="popup-heading">Start Booking Now</h3>
             <h4 class="popup-heading-secondary">Important - Please Read The Terms First</h4>
-            <p class="popup-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+            <div class="popup-container-text-paragraph">
+              <p class="popup-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+            </div>
             <br>
             <button class="btn btn-green">BOOK NOW</button>
           </div>
