@@ -1,18 +1,24 @@
+@import 'abstracts/mixins';
 @import 'base/animations';
+@import 'base/utilities';
+@import 'base/base';
 @import 'abstracts/variables';
 @import 'base/typography';
-@import 'layout/header';
-@import 'base/utilities';
+
+
+
 @import 'components/button';
-@import 'layout/about';
 @import 'components/composition';
+@import 'components/tourcards';
+@import 'components/bg-video';
+@import 'components/booking-container';
+
+@import 'layout/header';
+@import 'layout/about';
 @import 'layout/features';
 @import 'layout/tourcardssection';
-@import 'components/tourcards';
 @import 'layout/story';
-@import 'components/bg-video';
 @import 'layout/booking';
-@import 'components/booking-container';
 @import 'layout/footer';
 @import 'layout/navigation';
 @import 'layout/popup';
@@ -31,14 +37,4 @@
   padding: 0;
   box-sizing: inherit;
   margin: 0;
-}
-
-html {
-    font-size : 62.5%;
-}
-
-@media only screen and (max-width: 500px) {
-  html {
-    font-size: 25%;
-  }
 }

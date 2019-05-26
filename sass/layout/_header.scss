@@ -41,6 +41,10 @@ header {
     font-weight: 400;
     letter-spacing: 3.5rem;
 
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+
     animation-name : title-main;
     animation-duration: 5s;
   }

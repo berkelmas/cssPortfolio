@@ -5,6 +5,17 @@
   margin: 3rem;
   transition: all 2s;
 
+  @include respond(tab-land) {
+
+  }
+
+  @include respond(tab-port) {
+
+  }
+
+  @include respond(phone) {
+    margin-right : 5rem;
+  }
 
   // CARD 1
   &-1-front {
@@ -136,11 +147,13 @@
     font-size: 2.5rem;
     width : 15rem;
     background-image: linear-gradient(to right bottom, transparentize($light-green, .1), transparentize($dark-green, .1));
+    @include ustText;
     & + & {
       z-index: 3;
       width: 9rem;
       top: 19.5rem;
       left: 22rem;
+      @include altText;
     }
   }
 }
@@ -164,12 +177,14 @@
     font-size: 2.5rem;
     width : 15rem;
     background-image: linear-gradient(to right bottom, transparentize($blue-light, .1), transparentize($blue-light, .1));
+    @include ustText;
 
     & + & {
       z-index: 3;
       width: 55%;
       top: 19.5rem;
       left: 13.5rem;
+      @include altText;
     }
   }
 }
@@ -193,12 +208,14 @@
     font-size: 2.5rem;
     width : 25rem;
     background-image: linear-gradient(to right bottom, transparentize($orange-light, .1), transparentize($orange-light, .1));
+    @include ustText;
 
     & + & {
       z-index: 3;
       width: 80%;
       top: 19.5rem;
       left: 16.5rem;
+      @include altText;
     }
   }
 }

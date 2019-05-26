@@ -1,5 +1,5 @@
 .features-section{
-  height: 80vh;
+  height: 80rem;
   margin-bottom : 10vh;
   background-image: linear-gradient(to right, transparentize($light-green, 0.6), transparentize($dark-green, 0.6)), url('../img/nat-4.jpg');
   background-size: cover;
@@ -8,6 +8,20 @@
 
   margin-top : -10rem;
 
+  @include respond(tab-land) {
+
+  }
+
+  @include respond(tab-port) {
+
+  }
+
+  @include respond(phone) {
+    height: 250rem;
+    padding: 10rem 1rem;
+    margin-top : -30rem;
+  }
+
   &-card {
     background-color: rgba(darken($color-gray-light-1, 10%), .8);
     margin-top : 14rem;
@@ -15,6 +29,19 @@
     border-radius: 15px;
     transition: all .4s;
     padding : 1rem;
+
+    @include respond(tab-land) {
+      height : 30vh;
+    }
+
+    @include respond(tab-port) {
+      height : 35vh;
+    }
+
+    @include respond(phone) {
+      height : 39vh;
+    }
+
     &:hover{
       background-color: rgba(darken($color-gray-light-1, 20%), .8);
       box-shadow: .5rem 1rem 1rem rgba($color-black, .2);

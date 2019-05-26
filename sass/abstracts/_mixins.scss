@@ -1,6 +1,64 @@
-@mixin absCenter {
-  position : absolute;
-  top: 50%;
-  left: 50%;
-  transform : translate(-50%, -50%);
+// MEDIA QUERY MANAGER
+/*
+
+0 - 600px : Mobile/Phone;
+600px - 900px : Tablet-Portrait;
+900px - 1200px : Tablet-Landscape;
+
++ 1200px : Our desktop version
+
+We don't need to write any media queries for +1200 px
+because we followed desktop-first approach at first.
+
+Breakpoint Arguement Choices:
+
+- phone
+- tab-port
+- tab-land
+
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {@content}     // 600px
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {@content}     // 900px
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {@content}    // 1200px
+  }
+}
+
+
+/*
+Tour Cards text position mixin
+*/
+
+@mixin ustText {
+  @include respond(tab-land) {
+
+  }
+
+  @include respond(tab-port) {
+
+  }
+
+  @include respond(phone) {
+    left: 50%;
+  }
+}
+
+@mixin altText {
+  @include respond(tab-land) {
+
+  }
+
+  @include respond(tab-port) {
+
+  }
+
+  @include respond(phone) {
+    left : 50%;
+  }
 }

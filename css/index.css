@@ -1,3 +1,24 @@
+/*
+
+0 - 600px : Mobile/Phone;
+600px - 900px : Tablet-Portrait;
+900px - 1200px : Tablet-Landscape;
+
++ 1200px : Our desktop version
+
+We don't need to write any media queries for +1200 px
+because we followed desktop-first approach at first.
+
+Breakpoint Arguement Choices:
+
+- phone
+- tab-port
+- tab-land
+
+*/
+/*
+Tour Cards text position mixin
+*/
 @keyframes title-main {
   0% {
     opacity: 0;
@@ -28,6 +49,43 @@
     transform: translateY(0);
   }
 }
+.center-text {
+  text-align: center;
+}
+
+.margin-bottom-8 {
+  margin-bottom: 8rem;
+}
+
+.margin-l-5 {
+  margin-left: 5rem;
+}
+
+display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -82,6 +140,16 @@ body {
 .paragraph:not(:last-child) {
   margin-bottom: 1.5rem;
 }
+@media (max-width: 56.25em) {
+  .paragraph {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .paragraph {
+    font-size: 2rem;
+  }
+}
 
 i.features-icon {
   font-size: 6rem;
@@ -113,74 +181,21 @@ i.features-icon {
   backface-visibility: hidden;
   transform: skewX(10deg);
 }
+@media (max-width: 56.25em) {
+  .story-paragraph {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .story-paragraph {
+    font-size: 1.5rem;
+  }
+}
 .story-heading {
   display: inline;
   color: gray;
   text-transform: uppercase;
   transform: skewX(10deg);
-}
-
-header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(85, 197, 122, 0.4)), url("../img/hero.jpg");
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  position: relative;
-}
-header .header__logo--box {
-  position: absolute;
-  top: 3.5rem;
-  left: 2.5rem;
-}
-header .header__logo--logo {
-  height: 5rem;
-}
-header .header__box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-header .header__title {
-  text-transform: uppercase;
-  color: #fff;
-  margin-bottom: 4rem;
-}
-header .header__title--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: title-main;
-  animation-duration: 5s;
-}
-header .header__title--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 400;
-  letter-spacing: 1.75rem;
-  animation-name: title-sub;
-  animation-duration: 5s;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.margin-bottom-8 {
-  margin-bottom: 8rem;
-}
-
-.margin-l-5 {
-  margin-left: 5rem;
-}
-
-display-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .btn,
@@ -291,17 +306,14 @@ display-center {
   animation-duration: 2s;
 }
 
-.about-section {
-  background-color: #f7f7f7;
-  padding-top: 22.5rem;
-  padding-bottom: 20rem;
-  margin-top: -15vh;
-  overflow: hidden;
-}
-
 .composition {
   position: relative;
   height: 40rem;
+}
+@media (max-width: 75em) {
+  .composition {
+    height: 25rem;
+  }
 }
 .composition-image {
   position: absolute;
@@ -311,17 +323,49 @@ display-center {
   transition: all 0.5s;
   outline-offset: 2rem;
 }
+@media (max-width: 37.5em) {
+  .composition-image {
+    width: 45%;
+  }
+}
 .composition-image-1 {
   top: 4rem;
   left: 8rem;
+}
+@media (max-width: 37.5em) {
+  .composition-image-1 {
+    left: 4rem;
+  }
 }
 .composition-image-2 {
   top: 8rem;
   left: 32rem;
 }
+@media (max-width: 75em) {
+  .composition-image-2 {
+    left: 22rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .composition-image-2 {
+    left: 20rem;
+  }
+}
 .composition-image-3 {
   top: 20rem;
   left: 24rem;
+}
+@media (max-width: 75em) {
+  .composition-image-3 {
+    left: 14rem;
+    top: 15rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .composition-image-3 {
+    top: 15rem;
+    left: 8rem;
+  }
 }
 .composition-image:hover {
   transform: scale(1.4);
@@ -333,51 +377,17 @@ display-center {
   transform: scale(0.9);
 }
 
-.features-section {
-  height: 80vh;
-  margin-bottom: 10vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.4)), url("../img/nat-4.jpg");
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-  margin-top: -10rem;
-}
-.features-section-card {
-  background-color: rgba(222, 222, 222, 0.8);
-  margin-top: 14rem;
-  height: 45vh;
-  border-radius: 15px;
-  transition: all 0.4s;
-  padding: 1rem;
-}
-.features-section-card:hover {
-  background-color: rgba(196, 196, 196, 0.8);
-  box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
-  transform: translate(0.2rem, -0.2rem);
-}
-.features-section-card-title {
-  color: #6b6b6b;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-}
-
-.tour-cards-section {
-  background-color: #f7f7f7;
-  padding-top: 20rem;
-  padding-bottom: 5rem;
-  margin-top: -23rem;
-}
-
-.tour-text-container {
-  padding: 5rem;
-}
-
 .tour-card {
   position: relative;
   perspective: 100rem;
   height: 50rem;
   margin: 3rem;
   transition: all 2s;
+}
+@media (max-width: 37.5em) {
+  .tour-card {
+    margin-right: 5rem;
+  }
 }
 .tour-card-1-front {
   position: absolute;
@@ -490,11 +500,21 @@ display-center {
   width: 15rem;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.9), rgba(40, 180, 133, 0.9));
 }
+@media (max-width: 37.5em) {
+  .tour-card-front-img-text {
+    left: 50%;
+  }
+}
 .tour-card-front-img-text + .tour-card-front-img-text {
   z-index: 3;
   width: 9rem;
   top: 19.5rem;
   left: 22rem;
+}
+@media (max-width: 37.5em) {
+  .tour-card-front-img-text + .tour-card-front-img-text {
+    left: 50%;
+  }
 }
 
 .tour-card-front-img-2 {
@@ -518,11 +538,21 @@ display-center {
   width: 15rem;
   background-image: linear-gradient(to right bottom, rgba(0, 197, 255, 0.9), rgba(0, 197, 255, 0.9));
 }
+@media (max-width: 37.5em) {
+  .tour-card-front-img-2-text {
+    left: 50%;
+  }
+}
 .tour-card-front-img-2-text + .tour-card-front-img-2-text {
   z-index: 3;
   width: 55%;
   top: 19.5rem;
   left: 13.5rem;
+}
+@media (max-width: 37.5em) {
+  .tour-card-front-img-2-text + .tour-card-front-img-2-text {
+    left: 50%;
+  }
 }
 
 .tour-card-front-img-3 {
@@ -546,11 +576,21 @@ display-center {
   width: 25rem;
   background-image: linear-gradient(to right bottom, rgba(255, 170, 0, 0.9), rgba(255, 170, 0, 0.9));
 }
+@media (max-width: 37.5em) {
+  .tour-card-front-img-3-text {
+    left: 50%;
+  }
+}
 .tour-card-front-img-3-text + .tour-card-front-img-3-text {
   z-index: 3;
   width: 80%;
   top: 19.5rem;
   left: 16.5rem;
+}
+@media (max-width: 37.5em) {
+  .tour-card-front-img-3-text + .tour-card-front-img-3-text {
+    left: 50%;
+  }
 }
 
 .tour-list {
@@ -570,69 +610,12 @@ display-center {
   border-bottom: 0.01rem solid #f3f3f3;
 }
 
-.section-story {
-  position: relative;
-  padding: 0 0;
-  overflow: hidden;
-}
-.section-story-block {
-  width: 60%;
-  height: 20rem;
-  margin: 3rem auto;
-  background-color: #f7f7f7;
-  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
-  transform: skewX(-10deg);
-  overflow: hidden;
-  opacity: 0.85;
-}
-.section-story-block-img {
-  height: 100%;
-  transform: translateX(-3rem);
-  transition: all 0.4s;
-}
-.section-story-block-img-caption {
-  text-transform: uppercase;
-  color: white;
-  position: absolute;
-  top: 60%;
-  left: 23%;
-  opacity: 0;
-  transition: all 0.3s;
-}
-.section-story-block-img-block {
-  height: 100%;
-  overflow: hidden;
-  float: left;
-  clip-path: circle(33% at 40% 50%);
-  shape-outside: circle(40% at 40% 50%);
-  transform: skewX(10deg);
-}
-.section-story-block-img-block:hover .section-story-block-img {
-  transform: scale(1.2) translateX(-3rem);
-  filter: blur(2px) brightness(80%);
-}
-.section-story-block-img-block:hover .section-story-block-img-caption {
-  opacity: 1;
-  transform: translateY(-3rem);
-}
-
 .bg-video-container {
   position: absolute;
   z-index: -1;
 }
 .bg-video-content {
   opacity: 0.3;
-}
-
-.section-booking {
-  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-  padding: 15rem 10rem;
-}
-.section-booking-form-group {
-  margin-top: 1rem;
-}
-.section-booking-form-group:last-of-type {
-  margin-top: 3rem;
 }
 
 .section-booking-container {
@@ -722,6 +705,223 @@ display-center {
   margin-left: 0.2rem;
   margin-top: -0.15rem;
   transition: all 0.5s;
+}
+
+header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.4), rgba(85, 197, 122, 0.4)), url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+}
+header .header__logo--box {
+  position: absolute;
+  top: 3.5rem;
+  left: 2.5rem;
+}
+header .header__logo--logo {
+  height: 5rem;
+}
+header .header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+header .header__title {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+header .header__title--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  animation-name: title-main;
+  animation-duration: 5s;
+}
+@media (max-width: 37.5em) {
+  header .header__title--main {
+    font-size: 3rem;
+  }
+}
+header .header__title--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1.75rem;
+  animation-name: title-sub;
+  animation-duration: 5s;
+}
+
+.about-section {
+  background-color: #f7f7f7;
+  padding-top: 22.5rem;
+  padding-bottom: 20rem;
+  margin-top: -15vh;
+  overflow: hidden;
+}
+@media (max-width: 37.5em) {
+  .about-section {
+    padding-bottom: 30rem;
+  }
+}
+
+.features-section {
+  height: 80rem;
+  margin-bottom: 10vh;
+  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.4), rgba(40, 180, 133, 0.4)), url("../img/nat-4.jpg");
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  margin-top: -10rem;
+}
+@media (max-width: 37.5em) {
+  .features-section {
+    height: 250rem;
+    padding: 10rem 1rem;
+    margin-top: -30rem;
+  }
+}
+.features-section-card {
+  background-color: rgba(222, 222, 222, 0.8);
+  margin-top: 14rem;
+  height: 45vh;
+  border-radius: 15px;
+  transition: all 0.4s;
+  padding: 1rem;
+}
+@media (max-width: 75em) {
+  .features-section-card {
+    height: 30vh;
+  }
+}
+@media (max-width: 56.25em) {
+  .features-section-card {
+    height: 35vh;
+  }
+}
+@media (max-width: 37.5em) {
+  .features-section-card {
+    height: 39vh;
+  }
+}
+.features-section-card:hover {
+  background-color: rgba(196, 196, 196, 0.8);
+  box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translate(0.2rem, -0.2rem);
+}
+.features-section-card-title {
+  color: #6b6b6b;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.tour-cards-section {
+  background-color: #f7f7f7;
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+  margin-top: -23rem;
+}
+@media (max-width: 37.5em) {
+  .tour-cards-section {
+    padding-top: 40rem;
+    margin-top: -35rem;
+  }
+}
+
+.tour-text-container {
+  padding: 5rem;
+}
+
+.section-story {
+  position: relative;
+  padding: 0 0;
+  overflow: hidden;
+}
+.section-story-block {
+  width: 60%;
+  height: 20rem;
+  margin: 3rem auto;
+  background-color: #f7f7f7;
+  box-shadow: 0rem 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: skewX(-10deg);
+  overflow: hidden;
+  opacity: 0.85;
+}
+@media (max-width: 56.25em) {
+  .section-story-block {
+    transform: skewX(-6deg);
+    padding: 2rem;
+    line-height: 2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .section-story-block {
+    overflow: visible;
+    height: 100%;
+    transform: skewX(-3deg);
+    padding: 2rem;
+    line-height: 2rem;
+    margin: 1rem auto;
+  }
+  .section-story-block:last-child {
+    margin-bottom: 5rem;
+  }
+}
+.section-story-block-img {
+  height: 100%;
+  transform: translateX(-3rem);
+  transition: all 0.4s;
+}
+@media (max-width: 56.25em) {
+  .section-story-block-img {
+    display: none;
+  }
+}
+@media (max-width: 37.5em) {
+  .section-story-block-img {
+    display: none;
+  }
+}
+.section-story-block-img-caption {
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 23%;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.section-story-block-img-block {
+  height: 100%;
+  overflow: hidden;
+  float: left;
+  clip-path: circle(33% at 40% 50%);
+  shape-outside: circle(40% at 40% 50%);
+  transform: skewX(10deg);
+}
+.section-story-block-img-block:hover .section-story-block-img {
+  transform: scale(1.2) translateX(-3rem);
+  filter: blur(2px) brightness(80%);
+}
+.section-story-block-img-block:hover .section-story-block-img-caption {
+  opacity: 1;
+  transform: translateY(-3rem);
+}
+
+.section-booking {
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+  padding: 15rem 10rem;
+}
+.section-booking-form-group {
+  margin-top: 1rem;
+}
+.section-booking-form-group:last-of-type {
+  margin-top: 3rem;
 }
 
 .section-footer {
@@ -1911,16 +2111,6 @@ display-center {
   padding: 0;
   box-sizing: inherit;
   margin: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-@media only screen and (max-width: 500px) {
-  html {
-    font-size: 25%;
-  }
 }
 
 /*# sourceMappingURL=index.css.map */

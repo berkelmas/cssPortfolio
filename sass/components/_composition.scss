@@ -2,6 +2,18 @@
   position : relative;
   height: 40rem;
 
+  @include respond(tab-land) {
+    height: 25rem;
+  }
+
+  @include respond(tab-port) {
+
+  }
+
+  @include respond(phone) {
+
+  }
+
   &-image {
     position: absolute;
     border-radius: 1rem;
@@ -10,19 +22,69 @@
     transition: all 0.5s;
     outline-offset: 2rem;
 
+    @include respond(tab-land) {
+
+    }
+
+    @include respond(tab-port) {
+
+    }
+
+    @include respond(phone) {
+      width: 45%;
+    }
+
     &-1 {
       top : 4rem;
       left : 8rem;
+
+      @include respond(tab-land) {
+
+      }
+
+      @include respond(tab-port) {
+
+      }
+
+      @include respond(phone) {
+        left : 4rem;
+      }
     }
 
     &-2 {
       top: 8rem;
       left : 32rem;
+
+      @include respond(tab-land) {
+        left: 22rem;
+      }
+
+      @include respond(tab-port) {
+
+      }
+
+      @include respond(phone) {
+        left : 20rem;
+      }
     }
 
     &-3 {
       top: 20rem;
       left: 24rem;
+
+      @include respond(tab-land) {
+        left: 14rem;
+        top: 15rem; 
+      }
+
+      @include respond(tab-port) {
+
+      }
+
+      @include respond(phone) {
+        top: 15rem;
+        left: 8rem;
+      }
     }
 
     &:hover {

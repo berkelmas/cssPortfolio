@@ -54,6 +54,18 @@ body {
   &:not(:last-child) {
     margin-bottom: 1.5rem;
   }
+
+  @include respond(tab-land) {
+
+  }
+
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2rem;
+  }
 }
 
 i.features-icon {
@@ -87,6 +99,19 @@ i.features-icon {
     padding : .5rem;
     backface-visibility: hidden;
     transform: skewX(10deg);
+
+    @include respond(tab-land) {
+
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.5rem;
+    }
+
   }
   &-heading {
     display : inline;

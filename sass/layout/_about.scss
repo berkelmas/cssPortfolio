@@ -5,4 +5,16 @@
   padding-bottom : 20rem;
   margin-top: -15vh;
   overflow: hidden;
+
+  @include respond(tab-land) {
+
+  }
+
+  @include respond(tab-port) {
+
+  }
+
+  @include respond(phone) {
+    padding-bottom: 30rem; 
+  }
 }

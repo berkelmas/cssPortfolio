@@ -2,7 +2,22 @@
   background-color: $color-gray-light-1;
   padding-top : 20rem;
   padding-bottom : 5rem;
+
   margin-top: -23rem;
+
+  @include respond(tab-land) {
+
+  }
+
+  @include respond(tab-port) {
+
+  }
+
+  @include respond(phone) {
+    padding-top: 40rem;
+    margin-top: -35rem; 
+  }
+
 }
 
 .tour-text-container {
