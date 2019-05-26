@@ -13,11 +13,38 @@
 
        position : relative;
 
+       @include respond(tab-land) {
+
+       }
+
+       @include respond(tab-port) {
+
+       }
+
+       @include respond(phone) {
+         width: 100%;
+         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+       }
+
         &-block {
           width : 80%;
           position : absolute;
           top : 10rem;
           left : 5rem;
+
+          @include respond(tab-land) {
+
+          }
+
+          @include respond(tab-port) {
+
+          }
+
+          @include respond(phone) {
+            width : 80%;
+            left : 20%;
+          }
+
         }
 
        &-input {

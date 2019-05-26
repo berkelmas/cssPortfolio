@@ -22,6 +22,21 @@ body {
   }
 }
 
+.booking-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  background : linear-gradient(to right, $light-green, $dark-green);
+  -webkit-background-clip: text;
+  color : transparent;
+  transition: transform 0.3s;
+  &:hover{
+    transform : skewX(5deg) skewY(-2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 1rem rgba($color-black, .2)
+  }
+}
+
 .popup-heading {
   font-size: 3rem;
   display: inline-block;
@@ -118,5 +133,12 @@ i.features-icon {
     color : gray;
     text-transform: uppercase;
     transform: skewX(10deg);
+  }
+}
+
+.footer {
+  &-paragraph {
+    font-size: 1.6rem;
+    color: white; 
   }
 }

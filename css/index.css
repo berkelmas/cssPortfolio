@@ -110,6 +110,21 @@ body {
   text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
+.booking-heading {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: 700;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: transform 0.3s;
+}
+.booking-heading:hover {
+  transform: skewX(5deg) skewY(-2deg) scale(1.1);
+  text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.2);
+}
+
 .popup-heading {
   font-size: 3rem;
   display: inline-block;
@@ -196,6 +211,11 @@ i.features-icon {
   color: gray;
   text-transform: uppercase;
   transform: skewX(10deg);
+}
+
+.footer-paragraph {
+  font-size: 1.6rem;
+  color: white;
 }
 
 .btn,
@@ -631,11 +651,23 @@ i.features-icon {
   clip-path: polygon(0 0, 100% 0, 80% 100%, 0 100%);
   position: relative;
 }
+@media (max-width: 37.5em) {
+  .section-booking-container-form {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
 .section-booking-container-form-block {
   width: 80%;
   position: absolute;
   top: 10rem;
   left: 5rem;
+}
+@media (max-width: 37.5em) {
+  .section-booking-container-form-block {
+    width: 80%;
+    left: 20%;
+  }
 }
 .section-booking-container-form-input {
   display: block;
@@ -801,7 +833,7 @@ header .header__title--sub {
 }
 @media (max-width: 56.25em) {
   .features-section-card {
-    height: 35vh;
+    height: 40vh;
   }
 }
 @media (max-width: 37.5em) {
@@ -917,6 +949,11 @@ header .header__title--sub {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
   padding: 15rem 10rem;
 }
+@media (max-width: 37.5em) {
+  .section-booking {
+    padding: 1rem 1rem;
+  }
+}
 .section-booking-form-group {
   margin-top: 1rem;
 }
@@ -933,6 +970,11 @@ header .header__title--sub {
   display: block;
   width: 20rem;
   margin: 0 auto;
+}
+@media (max-width: 37.5em) {
+  .footer-logo-box {
+    width: 15rem;
+  }
 }
 .footer-logo {
   width: 100%;
@@ -964,6 +1006,17 @@ header .header__title--sub {
 }
 .footer-links-item:not(:first-of-type) {
   padding-left: 1rem;
+}
+@media (max-width: 56.25em) {
+  .footer-links-item {
+    display: block;
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .footer-links-item {
+    padding-left: 1rem;
+  }
 }
 
 .navigation-checkbox-button {

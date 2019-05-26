@@ -2,11 +2,23 @@
   background-image: linear-gradient(to right bottom, $light-green, $dark-green);
   padding : 15rem 10rem;
 
+  @include respond(tab-land) {
+
+  }
+
+  @include respond(tab-port) {
+
+  }
+
+  @include respond(phone) {
+    padding : 1rem 1rem;
+  }
+
   &-form-group {
     margin-top: 1rem;
 
     &:last-of-type {
-      margin-top : 3rem; 
+      margin-top : 3rem;
     }
   }
 }
